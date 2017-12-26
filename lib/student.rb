@@ -35,7 +35,6 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      COUNT(*)
       WHERE students.grade= 9
     SQL
 
