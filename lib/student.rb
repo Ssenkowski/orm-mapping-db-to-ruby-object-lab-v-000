@@ -66,7 +66,7 @@ class Student
       SELECT *
       FROM students
       WHERE students.grade= 12
-      ASC LIMIT 1
+      LIMIT 1
     SQL
 
     DB[:conn].execute(sql)
