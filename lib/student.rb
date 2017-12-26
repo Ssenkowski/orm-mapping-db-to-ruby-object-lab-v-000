@@ -11,8 +11,13 @@ class Student
   end
 
   def self.all
-    new_student = self.new
-  end
+    sql = <<-SQL
+      SELECT *
+      FROM songs
+    SQL
+
+    DB[:conn].execute(sql)
+    end
 
   def self.find_by_name(name)
     # find the student in the database given a name
