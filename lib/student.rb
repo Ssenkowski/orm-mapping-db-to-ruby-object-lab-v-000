@@ -24,6 +24,7 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM songs
+      WHERE student(name) = name
     SQL
 
     DB[:conn].execute(sql).map do |row|
